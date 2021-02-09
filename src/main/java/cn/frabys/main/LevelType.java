@@ -22,7 +22,7 @@ public enum LevelType {
     }
 
     /**
-     * 成员变量的geter和seter方法.
+     * 成员变量的geter和seter方法
      * @return
      */
     public String getType() {
