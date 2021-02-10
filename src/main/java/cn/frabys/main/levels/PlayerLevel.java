@@ -1,4 +1,4 @@
 package cn.frabys.main.levels;
 
-public interface PlayerLevel {
+public class PlayerLevel {
 }
