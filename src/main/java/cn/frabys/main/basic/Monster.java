@@ -4,15 +4,15 @@ import cn.frabys.main.levels.MonsterLevel;
 
 public abstract class Monster {
 
-    int id;
+    private int id;
 
-    String name;
+    private String name;
 
-    int entityId;
+    private int entityId;
 
-    int bleed;
+    private int bleed;
 
-    MonsterLevel level;
+    private MonsterLevel level;
 
     public Monster(int id, String name, int entityId, int bleed, MonsterLevel level) {
         this.id = id;

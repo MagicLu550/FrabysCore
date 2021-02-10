@@ -4,13 +4,13 @@ import cn.frabys.main.levels.EquipLevel;
 
 public abstract class Equip {
 
-    int durable;
+    private int durable;
 
-    int id;
+    private int id;
 
-    String name;
+    private String name;
 
-    EquipLevel level;
+    private EquipLevel level;
 
     public Equip(int durable, int id, String name, EquipLevel level) {
         this.durable = durable;
