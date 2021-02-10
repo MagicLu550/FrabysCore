@@ -7,4 +7,7 @@ public class PlayerLevel extends Level {
     public PlayerLevel(int level, String name, LevelType type, double ex) {
         super(level, name, type, ex);
     }
+    public void PaddEx() {
+
+    }
 }

@@ -1,6 +1,7 @@
 package cn.frabys.main.basic;
 
 import cn.frabys.main.levels.LevelType;
+import org.codehaus.groovy.antlr.treewalker.SourcePrinter;
 
 public abstract class Level {
 
@@ -12,7 +13,7 @@ public abstract class Level {
 
     private double ex;
 
-    private double nowEx;
+    private double nowEx = 0;
 
     public Level(int level, String name, LevelType type, double ex) {
         this.level = level;
@@ -20,6 +21,28 @@ public abstract class Level {
         this.type = type;
         this.ex = ex;
         this.nowEx = 0;
+    }
+
+    public void addEx(double ex0){
+        this.nowEx +=ex0;
+        if(this.nowEx >= this.ex){
+            this.nowEx -= this.ex;
+            level ++;
+            System.out.println("升级！");
+            ex*= 10;
+            if(this.nowEx >= this.ex) {
+                double muchEx = this.nowEx -= this.ex;
+                level ++;
+                System.out.println("升级！");
+                ex*= 10;
+                addEx(muchEx);
+            }
+        }
+    }
+
+    public double howEx() {
+        double Ex = this.ex - this.nowEx;
+        return Ex;
     }
 
     public int getLevel() {
