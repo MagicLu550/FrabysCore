@@ -1,4 +1,4 @@
-package cn.frabys.main;
+package cn.frabys.main.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package cn.frabys.main
+package cn.frabys.main.config
 
 
 import groovy.transform.Memoized
