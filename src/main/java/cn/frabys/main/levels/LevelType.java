@@ -1,6 +1,7 @@
 package cn.frabys.main.levels;
 
 public enum LevelType {
+
     BELL("铃铛",1),
 
     RED("赤笛",2),
