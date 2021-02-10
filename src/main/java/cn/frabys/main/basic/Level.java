@@ -22,6 +22,21 @@ public abstract class Level {
         this.nowEx = 0;
     }
 
+    public void addEx(double ex0){
+        this.nowEx +=ex0;
+        if(this.nowEx >= this.ex){
+            this.nowEx -= this.ex;
+            level ++;
+            ex*= 10;
+            if(this.nowEx >= this.ex) {
+                double muchEx = this.nowEx -= this.ex;
+                level ++;
+                ex*= 10;
+                addEx(muchEx);
+            }
+        }
+    }
+
     public int getLevel() {
         return level;
     }
