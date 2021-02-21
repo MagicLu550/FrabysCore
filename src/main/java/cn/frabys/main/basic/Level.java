@@ -15,6 +15,10 @@ public abstract class Level {
 
     private double nowEx = 0;
 
+    private double maxBuff;
+
+    private double power;
+
     public Level(int level, String name, LevelType type, double ex) {
         this.level = level;
         this.name = name;
@@ -83,5 +87,22 @@ public abstract class Level {
 
     public void setNowEx(double nowEx) {
         this.nowEx = nowEx;
+    }
+
+    public double getMaxBuff() {
+        return maxBuff;
+    }
+
+    public void setMaxBuff(double maxBuff) {
+        this.maxBuff = maxBuff;
+    }
+
+    public double getPower(LevelType levelType,Level level) {
+
+        return power;
+    }
+
+    public void setPower(double power) {
+        this.power = power;
     }
 }
